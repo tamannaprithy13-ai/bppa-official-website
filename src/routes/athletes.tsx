@@ -1,0 +1,3 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { AthletesPage } from "@/components/information-pages";
+export const Route = createFileRoute("/athletes")({ head: () => ({ meta: [{ title: "Athletes | BPPA" }, { name: "description", content: "The future home of verified BPPA athlete profiles and stories." }, { property: "og:title", content: "Athletes | BPPA" }, { property: "og:description", content: "Athlete-centered stories from Bangladesh para pickleball." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: AthletesPage });

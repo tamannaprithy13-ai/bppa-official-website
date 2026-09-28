@@ -1,0 +1,3 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { ParaPickleballPage } from "@/components/information-pages";
+export const Route = createFileRoute("/para-pickleball")({ head: () => ({ meta: [{ title: "Para Pickleball | BPPA" }, { name: "description", content: "An accessible introduction to para pickleball, participation, equipment, and safety." }, { property: "og:title", content: "Para Pickleball | BPPA" }, { property: "og:description", content: "Discover an adaptable, social, and competitive paddle sport." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: ParaPickleballPage });

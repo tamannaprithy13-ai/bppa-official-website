@@ -1,0 +1,3 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { NewsPage } from "@/components/information-pages";
+export const Route = createFileRoute("/news-media")({ head: () => ({ meta: [{ title: "News & Media | BPPA" }, { name: "description", content: "News, announcements, and future media resources from BPPA." }, { property: "og:title", content: "News & Media | BPPA" }, { property: "og:description", content: "The BPPA newsroom and media resource centre." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: NewsPage });

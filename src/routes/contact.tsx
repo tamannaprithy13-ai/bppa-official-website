@@ -1,0 +1,3 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { ContactPage } from "@/components/information-pages";
+export const Route = createFileRoute("/contact")({ head: () => ({ meta: [{ title: "Contact | BPPA" }, { name: "description", content: "Contact page prototype for Bangladesh Para Pickleball Association inquiries." }, { property: "og:title", content: "Contact | BPPA" }, { property: "og:description", content: "Connect with Bangladesh Para Pickleball Association." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: ContactPage });
