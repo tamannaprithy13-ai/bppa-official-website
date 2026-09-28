@@ -10,8 +10,11 @@ import communityImage from "@/assets/para-pickleball-community.jpg";
 import athleteImage from "@/assets/para-pickleball-athlete.jpg";
 
 const principles = [
-  ["Athlete-centered", "অ্যাথলেট-কেন্দ্রিক"], ["Inclusive by design", "পরিকল্পনায় অন্তর্ভুক্তিমূলক"], ["Safe participation", "নিরাপদ অংশগ্রহণ"], ["Transparent development", "স্বচ্ছ উন্নয়ন"],
-].map(([en, bn]) => text(en, bn));
+  text("Athlete-centered", "অ্যাথলেট-কেন্দ্রিক"),
+  text("Inclusive by design", "পরিকল্পনায় অন্তর্ভুক্তিমূলক"),
+  text("Safe participation", "নিরাপদ অংশগ্রহণ"),
+  text("Transparent development", "স্বচ্ছ উন্নয়ন"),
+];
 
 function FeatureGrid({ items }: { items: { title: LocalizedText; body: LocalizedText }[] }) {
   const { tx } = useLanguage();
