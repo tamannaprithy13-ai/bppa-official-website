@@ -1,0 +1,3 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { EventsPage } from "@/components/information-pages";
+export const Route = createFileRoute("/events")({ head: () => ({ meta: [{ title: "Events & Programs | BPPA" }, { name: "description", content: "Draft calendar for future BPPA camps, workshops, community days, and competitions." }, { property: "og:title", content: "Events & Programs | BPPA" }, { property: "og:description", content: "Future opportunities to meet, learn, and play para pickleball." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: EventsPage });

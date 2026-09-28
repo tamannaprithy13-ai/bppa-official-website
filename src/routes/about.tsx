@@ -1,0 +1,3 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { AboutPage } from "@/components/information-pages";
+export const Route = createFileRoute("/about")({ head: () => ({ meta: [{ title: "About BPPA | Bangladesh Para Pickleball Association" }, { name: "description", content: "Learn about BPPA's proposed mission, vision, and inclusive development direction." }, { property: "og:title", content: "About BPPA" }, { property: "og:description", content: "The proposed mission and direction of Bangladesh Para Pickleball Association." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: AboutPage });
