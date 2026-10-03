@@ -3,6 +3,7 @@ import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/language-provider";
+import { AccessibilityMenu } from "@/components/accessibility-menu";
 import { navigation, text } from "@/lib/content";
 import logo from "@/assets/bppa-logo.png.asset.json";
 
@@ -27,7 +28,8 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           <nav className="ml-auto hidden items-center gap-1 lg:flex" aria-label={tx(text("Main navigation", "প্রধান নেভিগেশন"))}>
             {navigation.map((item) => <Link key={item.to} to={item.to} activeOptions={{ exact: item.to === "/" }} className="border-b-2 border-transparent px-3 py-7 text-xs font-bold uppercase text-muted-foreground transition-colors hover:text-primary" activeProps={{ className: "border-accent text-primary" }}>{tx(item.label)}</Link>)}
           </nav>
-          <div className="flex shrink-0 items-center gap-1 lg:ml-3">
+          <div className="flex shrink-0 items-center gap-2 lg:ml-3">
+            <AccessibilityMenu />
             <Button variant="ghost" size="icon" className="min-h-11 min-w-11 lg:hidden" onClick={() => setMenuOpen((open) => !open)} aria-expanded={menuOpen} aria-controls="mobile-navigation" aria-label={tx(text("Toggle menu", "মেনু খুলুন বা বন্ধ করুন"))}>{menuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}</Button>
           </div>
         </div>
