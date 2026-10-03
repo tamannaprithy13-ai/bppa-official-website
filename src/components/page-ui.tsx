@@ -14,5 +14,5 @@ export function SectionHeading({ eyebrow, title, description, light = false }: {
 }
 
 export function TextLink({ to, children }: { to: "/about" | "/para-pickleball" | "/athletes" | "/events" | "/news-media" | "/contact"; children: React.ReactNode }) {
-  return <Link to={to} className="inline-flex items-center gap-2 border-b-2 border-accent pb-1 text-sm font-extrabold uppercase text-primary hover:text-accent-foreground">{children}<ArrowRight className="h-4 w-4" /></Link>;
+  return <Link to={to} className="inline-flex items-center gap-2 border-b-2 border-accent pb-1 text-sm font-extrabold uppercase text-primary hover:text-accent-foreground">{children}<ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>;
 }

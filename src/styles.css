@@ -153,6 +153,14 @@
     color: var(--color-accent-foreground);
   }
 
+  html {
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
   :focus-visible {
     outline: 3px solid var(--color-ring);
     outline-offset: 3px;
