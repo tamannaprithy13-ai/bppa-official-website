@@ -40,7 +40,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           <div><h2 className="mb-4 text-xs font-extrabold uppercase text-accent">{tx(text("Explore", "ঘুরে দেখুন"))}</h2><ul className="space-y-3 text-sm">{navigation.slice(1, 6).map((item) => <li key={item.to}><Link to={item.to} className="text-primary-foreground/75 hover:text-primary-foreground">{tx(item.label)}</Link></li>)}</ul></div>
           <div><h2 className="mb-4 text-xs font-extrabold uppercase text-accent">{tx(text("Official information", "আনুষ্ঠানিক তথ্য"))}</h2><p className="text-sm leading-7 text-primary-foreground/75">{tx(text("Contact address, telephone, email, leadership, and affiliations are awaiting official confirmation.", "যোগাযোগের ঠিকানা, টেলিফোন, ইমেইল, নেতৃত্ব ও অধিভুক্তির তথ্য আনুষ্ঠানিক নিশ্চিতকরণের অপেক্ষায়।"))}</p><Link to="/contact" className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-accent">{tx(text("Contact page", "যোগাযোগ পাতা"))}<ArrowUpRight className="h-4 w-4" aria-hidden="true" /></Link></div>
         </div>
-        <div className="border-t border-primary-foreground/15 px-5 py-5 text-center text-xs text-primary-foreground/60">© 2026 BPPA · {tx(text("Frontend prototype — not an official publication", "ফ্রন্টএন্ড প্রোটোটাইপ — আনুষ্ঠানিক প্রকাশনা নয়"))}</div>
+        <div className="border-t border-primary-foreground/15 px-5 py-5 text-center text-xs text-primary-foreground/80">© 2026 BPPA · {tx(text("Frontend prototype — not an official publication", "ফ্রন্টএন্ড প্রোটোটাইপ — আনুষ্ঠানিক প্রকাশনা নয়"))} · <Link to="/accessibility" className="font-bold text-primary-foreground underline underline-offset-4 hover:text-accent">Accessibility statement (draft)</Link></div>
       </footer>
     </div>
   );
